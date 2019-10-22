@@ -10,8 +10,8 @@ class UserService(val userRepository: UserRepository) {
         userRepository.save(user)
     }
     fun fetchUsers(): MutableList<User> {
-        val user = userRepository.findAll();
-        return user;
+        val users: MutableList<User> = userRepository.findAll();
+        return users;
     }
     fun deleteUser(id: String) {
         val id: Long = id.toLong()
