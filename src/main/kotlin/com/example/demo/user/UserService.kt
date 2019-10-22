@@ -23,6 +23,6 @@ class UserService(val userRepository: UserRepository) {
         user.userId = reqSignUpDto.userId
         user.password = reqSignUpDto.password
         user.name = reqSignUpDto.name
-        return userRepository.save(user)
+        return user
     }
 }
