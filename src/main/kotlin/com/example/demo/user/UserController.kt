@@ -17,17 +17,17 @@ class UserController (val userService: UserService){
     fun login(@RequestBody @Valid reqSignInDto: ReqSignInDto): String {
         return userService.login(reqSignInDto)
     }
-    @GetMapping("/")
+    @GetMapping("/users")
     fun users(): ResponseEntity<MutableList<ResUserListDto>> {
         val users: MutableList<ResUserListDto>? = userService.fetchUsers()
         return ResponseEntity.status(HttpStatus.OK).body(users)
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/users/{id}")
     fun deleteUser(@PathVariable id: Long): ResponseEntity<String> {
         userService.deleteUser(id)
         return ResponseEntity.status(HttpStatus.OK).body("삭제 되었습니다")
     }
-    @PutMapping("/{id}")
+    @PutMapping("/users/{id}")
     fun editUser(@RequestBody reqEditDto: ReqEditDto, @PathVariable id: Long): ResponseEntity<User> {
         val user: User = userService.update(id, reqEditDto)
         return ResponseEntity.status(HttpStatus.OK).body(user)
