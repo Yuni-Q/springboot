@@ -2,7 +2,8 @@ package com.example.demo.user
 
 import org.springframework.stereotype.Service
 import java.lang.RuntimeException
-import java.util.*
+import java.util.stream.Collectors
+import javax.transaction.Transactional
 
 @Service
 class UserService(val userRepository: UserRepository) {
@@ -14,17 +15,23 @@ class UserService(val userRepository: UserRepository) {
         val user: User = userRepository.findByUserIdAndPassword(reqSignInDto.userId, reqSignInDto.password).orElseThrow { RuntimeException() }
         return user.name
     }
-    fun fetchUsers(): MutableList<User> {
-        val users: MutableList<User> = userRepository.findAll();
-        return users;
+    fun fetchUsers(): MutableList<ResUserListDto>? {
+        return userRepository.findAll().stream()
+                .map { user: User -> ResUserListDto(user.userId, user.name) }
+                .collect(Collectors.toList())
     }
     fun deleteUser(id: Long) {
         userRepository.deleteById(id)
     }
-    fun update(id: Long, reqUserUpdateDto: ReqUserUpdateDto): User {
+    @Transactional
+    fun update(id: Long, reqEditDto: ReqEditDto): User {
         val user: User = userRepository.findById(id).orElseThrow { RuntimeException() }
-        user.password = reqUserUpdateDto.password
-        user.name = reqUserUpdateDto.name
+        reqEditDto.name?.let {
+            user.name = it
+        }
+        reqEditDto.password?.let {
+            user.password = it
+        }
         return user
     }
 }

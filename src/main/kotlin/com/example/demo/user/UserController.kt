@@ -18,8 +18,8 @@ class UserController (val userService: UserService){
         return userService.login(reqSignInDto)
     }
     @GetMapping("/")
-    fun users(): ResponseEntity<MutableList<User>> {
-        val users: MutableList<User> = userService.fetchUsers()
+    fun users(): ResponseEntity<MutableList<ResUserListDto>> {
+        val users: MutableList<ResUserListDto>? = userService.fetchUsers()
         return ResponseEntity.status(HttpStatus.OK).body(users)
     }
     @DeleteMapping("/{id}")
@@ -28,8 +28,8 @@ class UserController (val userService: UserService){
         return ResponseEntity.status(HttpStatus.OK).body("삭제 되었습니다")
     }
     @PutMapping("/{id}")
-    fun editUser(@RequestBody @Valid reqUserUpdateDto: ReqUserUpdateDto, @PathVariable id: Long): ResponseEntity<User> {
-        val user: User = userService.update(id, reqUserUpdateDto)
+    fun editUser(@RequestBody reqEditDto: ReqEditDto, @PathVariable id: Long): ResponseEntity<User> {
+        val user: User = userService.update(id, reqEditDto)
         return ResponseEntity.status(HttpStatus.OK).body(user)
     }
 }
