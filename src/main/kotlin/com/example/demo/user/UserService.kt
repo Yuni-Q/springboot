@@ -1,6 +1,7 @@
 package com.example.demo.user
 
 import org.springframework.stereotype.Service
+import java.lang.RuntimeException
 import java.util.*
 
 @Service
@@ -19,7 +20,7 @@ class UserService(val userRepository: UserRepository) {
     }
     fun update(id: String, reqSignUpDto: ReqSignDto): User {
         val id: Long = id.toLong()
-        val user: User = userRepository.findById(id).get();
+        val user: User = userRepository.findById(id).orElseThrow { RuntimeException() }
         user.userId = reqSignUpDto.userId
         user.password = reqSignUpDto.password
         user.name = reqSignUpDto.name
