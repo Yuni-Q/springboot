@@ -19,12 +19,12 @@ class UserController (val userService: UserService){
         return ResponseEntity.status(HttpStatus.OK).body(users)
     }
     @DeleteMapping("/{id}")
-    fun deleteUser(@PathVariable id: String): ResponseEntity<String> {
+    fun deleteUser(@PathVariable id: Long): ResponseEntity<String> {
         userService.deleteUser(id)
         return ResponseEntity.status(HttpStatus.OK).body("삭제 되었습니다")
     }
     @PutMapping("/{id}")
-    fun editUser(@RequestBody @Valid reqSignUpDto: ReqSignDto, @PathVariable id: String): ResponseEntity<User> {
+    fun editUser(@RequestBody @Valid reqSignUpDto: ReqSignDto, @PathVariable id: Long): ResponseEntity<User> {
         val user: User = userService.update(id, reqSignUpDto)
         return ResponseEntity.status(HttpStatus.OK).body(user)
     }
