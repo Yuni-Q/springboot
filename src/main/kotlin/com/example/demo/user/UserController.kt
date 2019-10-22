@@ -28,8 +28,8 @@ class UserController (val userService: UserService){
         return ResponseEntity.status(HttpStatus.OK).body("삭제 되었습니다")
     }
     @PutMapping("/users/{id}")
-    fun editUser(@RequestBody reqEditDto: ReqEditDto, @PathVariable id: Long): ResponseEntity<User> {
+    fun editUser(@RequestBody reqEditDto: ReqEditDto, @PathVariable id: Long): ResponseEntity<String> {
         val user: User = userService.update(id, reqEditDto)
-        return ResponseEntity.status(HttpStatus.OK).body(user)
+        return ResponseEntity.status(HttpStatus.OK).body("수정 되었습니다")
     }
 }

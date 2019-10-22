@@ -5,11 +5,17 @@ import java.lang.RuntimeException
 import java.util.stream.Collectors
 import javax.transaction.Transactional
 
+
+
 @Service
 class UserService(val userRepository: UserRepository) {
     fun signUp(reqSignUpDto: ReqSignDto) {
-        val user: User = User(reqSignUpDto.userId, reqSignUpDto.password, reqSignUpDto.name)
-        userRepository.save(user)
+        val user = userRepository.findByUserId(reqSignUpDto.userId)
+        if (userRepository.findByUserId(reqSignUpDto.userId).isPresent) {
+            throw ExceptionInInitializerError("userId가 존재합니다.")
+        }
+        val newUser: User = User(reqSignUpDto.userId, reqSignUpDto.password, reqSignUpDto.name)
+        userRepository.save(newUser)
     }
     fun login(reqSignInDto: ReqSignInDto): String {
         val user: User = userRepository.findByUserIdAndPassword(reqSignInDto.userId, reqSignInDto.password).orElseThrow { RuntimeException() }
