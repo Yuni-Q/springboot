@@ -32,7 +32,7 @@ class UserController (val userService: UserService){
         val response = Response(200, null, "OK", "삭제되었습니다")
         return ResponseEntity.status(HttpStatus.OK).body(response)
     }
-    @PutMapping("/users/{id}")
+    @PatchMapping("/users/{id}")
     fun editUser(@RequestBody reqEditDto: ReqEditDto, @PathVariable id: Long): ResponseEntity<Response<User>> {
         val user: User = userService.update(id, reqEditDto)
         val response = Response(201, null, "OK", user)
