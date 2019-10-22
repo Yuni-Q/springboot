@@ -9,27 +9,33 @@ import javax.validation.Valid
 class UserController (val userService: UserService){
 
     @PostMapping("/sign-up")
-    fun signUp(@RequestBody @Valid reqSignUpDto: ReqSignDto): ResponseEntity<String>  {
+    fun signUp(@RequestBody @Valid reqSignUpDto: ReqSignDto): ResponseEntity<Response<String>> {
         userService.signUp(reqSignUpDto)
-        return ResponseEntity.status(HttpStatus.OK).body("생성 되었습니다")
+        val response = Response(200, null,"OK", "생성 되었습니다.")
+        return ResponseEntity.status(HttpStatus.OK).body(response)
     }
     @PostMapping("/login")
-    fun login(@RequestBody @Valid reqSignInDto: ReqSignInDto): String {
-        return userService.login(reqSignInDto)
+    fun login(@RequestBody @Valid reqSignInDto: ReqSignInDto): ResponseEntity<Response<String>> {
+        val name = userService.login(reqSignInDto)
+        val response = Response(200, null, "OK", name)
+        return ResponseEntity.status(HttpStatus.OK).body(response)
     }
     @GetMapping("/users")
-    fun users(): ResponseEntity<MutableList<ResUserListDto>> {
+    fun users(): ResponseEntity<Response<MutableList<ResUserListDto>>> {
         val users: MutableList<ResUserListDto>? = userService.fetchUsers()
-        return ResponseEntity.status(HttpStatus.OK).body(users)
+        val response = Response(200, null, "OK", users)
+        return ResponseEntity.status(HttpStatus.OK).body(response)
     }
     @DeleteMapping("/users/{id}")
-    fun deleteUser(@PathVariable id: Long): ResponseEntity<String> {
+    fun deleteUser(@PathVariable id: Long): ResponseEntity<Response<String>> {
         userService.deleteUser(id)
-        return ResponseEntity.status(HttpStatus.OK).body("삭제 되었습니다")
+        val response = Response(200, null, "OK", "삭제되었습니다")
+        return ResponseEntity.status(HttpStatus.OK).body(response)
     }
     @PutMapping("/users/{id}")
-    fun editUser(@RequestBody reqEditDto: ReqEditDto, @PathVariable id: Long): ResponseEntity<String> {
+    fun editUser(@RequestBody reqEditDto: ReqEditDto, @PathVariable id: Long): ResponseEntity<Response<User>> {
         val user: User = userService.update(id, reqEditDto)
-        return ResponseEntity.status(HttpStatus.OK).body("수정 되었습니다")
+        val response = Response(201, null, "OK", user)
+        return ResponseEntity.status(HttpStatus.OK).body(response)
     }
 }
