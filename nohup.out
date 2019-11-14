@@ -231,3 +231,274 @@ Hibernate:
         user0_.user_id as user_id4_0_ 
     from
         yuni user0_
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.0.RELEASE)
+
+2019-11-14 14:19:26.712  INFO 38990 --- [           main] com.example.demo.DemoApplicationKt       : Starting DemoApplicationKt on yuniqwoowahancomui-MacBookPro.local with PID 38990 (/Users/yuniq/Documents/dev/yuni/springboot/build/libs/demo-0.0.1-SNAPSHOT.jar started by yuniq in /Users/yuniq/Documents/dev/yuni/springboot)
+2019-11-14 14:19:26.721  INFO 38990 --- [           main] com.example.demo.DemoApplicationKt       : No active profile set, falling back to default profiles: default
+2019-11-14 14:19:27.772  INFO 38990 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-14 14:19:27.850  INFO 38990 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 1 repository interfaces.
+2019-11-14 14:19:28.282  INFO 38990 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-14 14:19:28.747  INFO 38990 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-14 14:19:28.767  INFO 38990 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-14 14:19:28.767  INFO 38990 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-14 14:19:28.870  INFO 38990 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-14 14:19:28.870  INFO 38990 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2050 ms
+2019-11-14 14:19:29.158  INFO 38990 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-14 14:19:29.272  INFO 38990 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-11-14 14:19:29.505  INFO 38990 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-14 14:19:29.620  INFO 38990 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-14 14:19:30.092  INFO 38990 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-14 14:19:30.119  INFO 38990 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Hibernate: 
+    
+    drop table if exists yuni
+Hibernate: 
+    
+    create table yuni (
+       id bigint not null auto_increment,
+        name varchar(255),
+        password varchar(255),
+        user_id varchar(255),
+        primary key (id)
+    ) engine=MyISAM
+2019-11-14 14:19:30.877  INFO 38990 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-14 14:19:30.887  INFO 38990 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-14 14:19:32.197  INFO 38990 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 14:19:32.499  INFO 38990 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-14 14:19:32.501  INFO 38990 --- [           main] com.example.demo.DemoApplicationKt       : Started DemoApplicationKt in 6.719 seconds (JVM running for 7.51)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.0.RELEASE)
+
+2019-11-14 16:47:10.389  INFO 6081 --- [           main] com.example.demo.DemoApplicationKt       : Starting DemoApplicationKt on yuniqwoowahancomui-MacBookPro.local with PID 6081 (/Users/yuniq/Documents/dev/yuni/springboot/build/libs/demo-0.0.1-SNAPSHOT.jar started by yuniq in /Users/yuniq/Documents/dev/yuni/springboot)
+2019-11-14 16:47:10.393  INFO 6081 --- [           main] com.example.demo.DemoApplicationKt       : No active profile set, falling back to default profiles: default
+2019-11-14 16:47:11.217  INFO 6081 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-14 16:47:11.292  INFO 6081 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 1 repository interfaces.
+2019-11-14 16:47:11.693  INFO 6081 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-14 16:47:12.109  INFO 6081 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-14 16:47:12.125  INFO 6081 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-14 16:47:12.125  INFO 6081 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-14 16:47:12.205  INFO 6081 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-14 16:47:12.205  INFO 6081 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1706 ms
+2019-11-14 16:47:12.407  INFO 6081 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-14 16:47:12.459  INFO 6081 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-11-14 16:47:12.600  INFO 6081 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-14 16:47:12.687  INFO 6081 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-14 16:47:13.212  INFO 6081 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-14 16:47:13.234  INFO 6081 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Hibernate: 
+    
+    drop table if exists yuni
+Hibernate: 
+    
+    create table yuni (
+       id bigint not null auto_increment,
+        name varchar(255),
+        password varchar(255),
+        user_id varchar(255),
+        primary key (id)
+    ) engine=MyISAM
+2019-11-14 16:47:13.758  INFO 6081 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-14 16:47:13.767  INFO 6081 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-14 16:47:15.062  INFO 6081 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 16:47:15.364  INFO 6081 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-14 16:47:15.368  INFO 6081 --- [           main] com.example.demo.DemoApplicationKt       : Started DemoApplicationKt in 5.685 seconds (JVM running for 6.194)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.0.RELEASE)
+
+2019-11-14 16:47:19.923  INFO 6098 --- [           main] com.example.demo.DemoApplicationKt       : Starting DemoApplicationKt on yuniqwoowahancomui-MacBookPro.local with PID 6098 (/Users/yuniq/Documents/dev/yuni/springboot/build/libs/demo-0.0.1-SNAPSHOT.jar started by yuniq in /Users/yuniq/Documents/dev/yuni/springboot)
+2019-11-14 16:47:19.926  INFO 6098 --- [           main] com.example.demo.DemoApplicationKt       : No active profile set, falling back to default profiles: default
+2019-11-14 16:47:20.781  INFO 6098 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-14 16:47:20.843  INFO 6098 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53ms. Found 1 repository interfaces.
+2019-11-14 16:47:21.201  INFO 6098 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-14 16:47:21.642  INFO 6098 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-14 16:47:21.661  INFO 6098 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-14 16:47:21.661  INFO 6098 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-14 16:47:21.753  INFO 6098 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-14 16:47:21.754  INFO 6098 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1730 ms
+2019-11-14 16:47:22.009  INFO 6098 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-14 16:47:22.095  INFO 6098 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-11-14 16:47:22.362  INFO 6098 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-14 16:47:22.476  INFO 6098 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-14 16:47:22.954  INFO 6098 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-14 16:47:22.972  INFO 6098 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-11-14 16:47:23.718  INFO 6081 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-14 16:47:23.720  INFO 6081 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-14 16:47:23.731  INFO 6081 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+Hibernate: 
+    
+    drop table if exists yuni
+Hibernate: 
+    
+    create table yuni (
+       id bigint not null auto_increment,
+        name varchar(255),
+        password varchar(255),
+        user_id varchar(255),
+        primary key (id)
+    ) engine=MyISAM
+2019-11-14 16:47:23.836  INFO 6098 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-14 16:47:23.852  INFO 6098 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.name as name2_0_,
+        user0_.password as password3_0_,
+        user0_.user_id as user_id4_0_ 
+    from
+        yuni user0_
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.name as name2_0_,
+        user0_.password as password3_0_,
+        user0_.user_id as user_id4_0_ 
+    from
+        yuni user0_
+2019-11-14 16:47:25.669  INFO 6098 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 16:47:25.979  INFO 6098 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-11-14 16:47:25.987  INFO 6098 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-14 16:47:25.989 ERROR 6098 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2019-11-14 16:47:25.992  INFO 6098 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-14 16:47:25.992  INFO 6098 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-14 16:47:25.994  INFO 6098 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-14 16:47:26.004  INFO 6098 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.0.RELEASE)
+
+2019-11-15 17:35:00.314  INFO 82531 --- [           main] com.example.demo.DemoApplicationKt       : Starting DemoApplicationKt on yuniqwoowahancomui-MacBookPro.local with PID 82531 (/Users/yuniq/Documents/dev/yuni/springboot/build/libs/demo-0.0.1-SNAPSHOT.jar started by yuniq in /Users/yuniq/Documents/dev/yuni/springboot)
+2019-11-15 17:35:00.318  INFO 82531 --- [           main] com.example.demo.DemoApplicationKt       : No active profile set, falling back to default profiles: default
+2019-11-15 17:35:01.244  INFO 82531 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-15 17:35:01.308  INFO 82531 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 1 repository interfaces.
+2019-11-15 17:35:01.709  INFO 82531 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-15 17:35:02.271  INFO 82531 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-15 17:35:02.306  INFO 82531 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-15 17:35:02.306  INFO 82531 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-15 17:35:02.409  INFO 82531 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-15 17:35:02.410  INFO 82531 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2010 ms
+2019-11-15 17:35:02.844  INFO 82531 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-15 17:35:03.035  INFO 82531 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-11-15 17:35:03.395  INFO 82531 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-15 17:35:03.546  INFO 82531 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-15 17:35:04.139  INFO 82531 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-15 17:35:04.156  INFO 82531 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Hibernate: 
+    
+    drop table if exists yuni
+Hibernate: 
+    
+    create table yuni (
+       id bigint not null auto_increment,
+        name varchar(255),
+        password varchar(255),
+        user_id varchar(255),
+        primary key (id)
+    ) engine=MyISAM
+2019-11-15 17:35:05.093  INFO 82531 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-15 17:35:05.100  INFO 82531 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-15 17:35:06.718  INFO 82531 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-15 17:35:07.336  INFO 82531 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-15 17:35:07.338  INFO 82531 --- [           main] com.example.demo.DemoApplicationKt       : Started DemoApplicationKt in 7.718 seconds (JVM running for 8.254)
+2019-11-15 17:35:35.248  INFO 82531 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-15 17:35:35.249  INFO 82531 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-15 17:35:35.255  INFO 82531 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.name as name2_0_,
+        user0_.password as password3_0_,
+        user0_.user_id as user_id4_0_ 
+    from
+        yuni user0_
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.0.RELEASE)
+
+2019-11-15 17:35:56.041  INFO 82620 --- [           main] com.example.demo.DemoApplicationKt       : Starting DemoApplicationKt on yuniqwoowahancomui-MacBookPro.local with PID 82620 (/Users/yuniq/Documents/dev/yuni/springboot/build/libs/demo-0.0.1-SNAPSHOT.jar started by yuniq in /Users/yuniq/Documents/dev/yuni/springboot)
+2019-11-15 17:35:56.046  INFO 82620 --- [           main] com.example.demo.DemoApplicationKt       : No active profile set, falling back to default profiles: default
+2019-11-15 17:35:57.402  INFO 82620 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-15 17:35:57.479  INFO 82620 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60ms. Found 1 repository interfaces.
+2019-11-15 17:35:58.020  INFO 82620 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-15 17:35:58.686  INFO 82620 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-15 17:35:58.704  INFO 82620 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-15 17:35:58.705  INFO 82620 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-15 17:35:58.892  INFO 82620 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-15 17:35:58.892  INFO 82620 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2688 ms
+2019-11-15 17:35:59.225  INFO 82620 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-15 17:35:59.453  INFO 82620 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-11-15 17:35:59.696  INFO 82620 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-15 17:35:59.854  INFO 82620 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-15 17:36:00.480  INFO 82620 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-15 17:36:00.506  INFO 82620 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Hibernate: 
+    
+    drop table if exists yuni
+Hibernate: 
+    
+    create table yuni (
+       id bigint not null auto_increment,
+        name varchar(255),
+        password varchar(255),
+        user_id varchar(255),
+        primary key (id)
+    ) engine=MyISAM
+2019-11-15 17:36:01.415  INFO 82620 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-15 17:36:01.427  INFO 82620 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-15 17:36:03.061  INFO 82620 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-15 17:36:03.543  INFO 82620 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-15 17:36:03.545  INFO 82620 --- [           main] com.example.demo.DemoApplicationKt       : Started DemoApplicationKt in 8.238 seconds (JVM running for 8.873)
+2019-11-15 17:36:03.957  INFO 82620 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-15 17:36:03.957  INFO 82620 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-15 17:36:03.968  INFO 82620 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+Hibernate: 
+    select
+        user0_.id as id1_0_,
+        user0_.name as name2_0_,
+        user0_.password as password3_0_,
+        user0_.user_id as user_id4_0_ 
+    from
+        yuni user0_

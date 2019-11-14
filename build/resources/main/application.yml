@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/springboot?characterEncoding=UTF-8&serverTimezone=UTC
-    username: yuniq
-    password: dldbsgml
+    url: jdbc:mysql://database-1.cbopabdh50kn.ap-northeast-2.rds.amazonaws.com/chocopie?characterEncoding=UTF-8&serverTimezone=UTC&autoReconnection=true
+    username: admin
+    password: chocopie
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
