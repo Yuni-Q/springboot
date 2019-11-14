@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/springboot?characterEncoding=UTF-8&serverTimezone=UTC
+    username: yuniq
+    password: dldbsgml
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    generate-ddl: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
